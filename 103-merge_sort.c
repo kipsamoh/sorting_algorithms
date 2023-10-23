@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
 /**
  * print_data - print data
  * @msg: message
