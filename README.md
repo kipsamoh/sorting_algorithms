@@ -411,11 +411,7 @@ alex@/tmp/sort$ ./shell
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
-alex@/tmp/sort$
-Repo:
 
-GitHub repository: sorting_algorithms
-File: 100-shell_sort.c
 
 5. Cocktail shaker sort
 #advanced
@@ -513,11 +509,8 @@ alex@/tmp/sort$ ./cocktail
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
-alex@/tmp/sort$
-Repo:
 
-GitHub repository: sorting_algorithms
-File: 101-cocktail_sort_list.c, 101-O
+
 
 6. Counting sort
 #advanced
@@ -555,18 +548,17 @@ int main(void)
     print_array(array, n);
     return (0);
 }
-alex@/tmp/sort$ gcc -Wall -Wextra -Werror -pedantic  -std=gnu89 102-main.c 102-counting_sort.c print_array.c -o counting
-alex@/tmp/sort$ ./counting
+
+
 19, 48, 99, 71, 13, 52, 96, 73, 86, 7
 
 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 10
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
-alex@/tmp/sort$
-Repo:
 
-GitHub repository: sorting_algorithms
-File: 102-counting_sort.c, 102-O
+
+
+
 
 7. Merge sort
 #advanced
@@ -648,11 +640,10 @@ Merging...
 [Done]: 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
-alex@/tmp/sort$
-Repo:
 
-GitHub repository: sorting_algorithms
-File: 103-merge_sort.c, 103-O
+
+
+
 
 8. Heap sort
 #advanced
@@ -721,11 +712,9 @@ alex@/tmp/sort$ ./heap
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
-alex@/tmp/sort$
-Repo:
 
-GitHub repository: sorting_algorithms
-File: 104-heap_sort.c, 104-O
+
+
 
 9. Radix sort
 #advanced
@@ -766,11 +755,8 @@ alex@/tmp/sort$ ./radix
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
-alex@/tmp/sort$
-Repo:
 
-GitHub repository: sorting_algorithms
-File: 105-radix_sort.c
+
 
 10. Bitonic sort
 #advanced
@@ -874,11 +860,9 @@ Result [16/16] (UP):
 13, 14, 15, 26, 31, 39, 40, 46, 54, 56, 57, 58, 78, 85, 93, 100
 
 13, 14, 15, 26, 31, 39, 40, 46, 54, 56, 57, 58, 78, 85, 93, 100
-alex@/tmp/sort$
-Repo:
 
-GitHub repository: sorting_algorithms
-File: 106-bitonic_sort.c, 106-O
+
+
 
 11. Quick Sort - Hoare Partition scheme
 #advanced
@@ -973,11 +957,9 @@ alex@/tmp/sort$ ./quick_2
 6, 8, 11, 13, 16, 21, 24, 26, 27, 28, 30, 36, 38, 39, 42, 45, 52, 58, 59, 62, 63, 65, 69, 71, 75, 83, 87, 88, 92, 93
 
 6, 8, 11, 13, 16, 21, 24, 26, 27, 28, 30, 36, 38, 39, 42, 45, 52, 58, 59, 62, 63, 65, 69, 71, 75, 83, 87, 88, 92, 93
-alex@/tmp/sort$
-Repo:
 
-GitHub repository: sorting_algorithms
-File: 107-quick_sort_hoare.c, 107-O
+
+
 
 12. Dealer
 #advanced
