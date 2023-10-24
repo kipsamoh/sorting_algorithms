@@ -1,16 +1,16 @@
 #include "sort.h"
 
 /**
- * insertion_sort_list - sorts a DLL of integers in
- * ascending order using the insertion sort
+ * insertion_sort_list - _sorts a _DLL of integers in
+ * _ascending order using the _insertion sort
  * algorithm
  *
- * @list: doubly linked list
+ * @list: doubly _linked list
  * Return: no return
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *ptr, *tmp;
+	listint_t *ptr, *temp;
 
 	if (!list)
 		return;
@@ -21,23 +21,23 @@ void insertion_sort_list(listint_t **list)
 	{
 		while (ptr->next && (ptr->n > ptr->next->n))
 		{
-			tmp = ptr->next;
-			ptr->next = tmp->next;
-			tmp->prev = ptr->prev;
+			temp = ptr->next;
+			ptr->next = temp->next;
+			temp->prev = ptr->prev;
 
 			if (ptr->prev)
-				ptr->prev->next = tmp;
+				ptr->prev->next = temp;
 
-			if (tmp->next)
-				tmp->next->prev = ptr;
+			if (temp->next)
+				temp->next->prev = ptr;
 
-			ptr->prev = tmp;
-			tmp->next = ptr;
+			ptr->prev = temp;
+			temp->next = ptr;
 
-			if (tmp->prev)
-				ptr = tmp->prev;
+			if (temp->prev)
+				ptr = temp->prev;
 			else
-				*list = tmp;
+				*list = temp;
 
 			print_list(*list);
 		}
