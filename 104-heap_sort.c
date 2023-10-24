@@ -1,7 +1,7 @@
 #include "sort.h"
 #include <stdio.h>
 /**
- * swap_nums - swaps numbers
+ * swap_nums - _swaps numbers
  *
  * @arr: input array
  * @a: first index
@@ -16,7 +16,7 @@ void swap_nums(int *arr, int a, int b)
 }
 
 /**
- * recursion_heap - recursion that builds the max heap tree
+ * recursion_heap - _recursion that builds the _max heap tree
  *
  * @arr: input array
  * @i: index number
@@ -26,7 +26,7 @@ void swap_nums(int *arr, int a, int b)
  */
 void recursion_heap(int *arr, int i, size_t size, int limit)
 {
-	int bigger;
+	int _bigger;
 	int i2;
 
 	i2 = i * 2;
@@ -41,21 +41,21 @@ void recursion_heap(int *arr, int i, size_t size, int limit)
 		return;
 
 	if (i2 + 2 < limit)
-		bigger = (arr[i2 + 1] > arr[i2 + 2]) ? (i2 + 1) : (i2 + 2);
+		_bigger = (arr[i2 + 1] > arr[i2 + 2]) ? (i2 + 1) : (i2 + 2);
 	else
-		bigger = i2 + 1;
+		_bigger = i2 + 1;
 
-	if (arr[i] < arr[bigger])
+	if (arr[i] < arr[_bigger])
 	{
-		swap_nums(arr, i, bigger);
+		swap_nums(arr, i, _bigger);
 		print_array(arr, size);
-		recursion_heap(arr, bigger, size, limit);
+		recursion_heap(arr, _bigger, size, limit);
 	}
 }
 
 /**
- * heap_sort - sorts an array of integers in ascending
- * order using the Heap sort algorithm
+ * heap_sort - _sorts an array of integers in _ascending
+ * order using the _Heap sort algorithm
  *
  * @array: input array
  * @size: size of the array
@@ -63,22 +63,22 @@ void recursion_heap(int *arr, int i, size_t size, int limit)
 void heap_sort(int *array, size_t size)
 {
 	int i;
-	size_t limit;
+	size_t _limit;
 
 	if (!array || size == 0)
 		return;
 
 	i = 0;
-	limit = size;
+	_limit = size;
 
-	while (limit > 1)
+	while (_limit > 1)
 	{
-		recursion_heap(array, i, size, limit);
-		if (array[i] >= array[limit - 1])
+		recursion_heap(array, i, size, _limit);
+		if (array[i] >= array[_limit - 1])
 		{
-			swap_nums(array, i, limit - 1);
+			swap_nums(array, i, _limit - 1);
 			print_array(array, size);
 		}
-		limit--;
+		_limit--;
 	}
 }
