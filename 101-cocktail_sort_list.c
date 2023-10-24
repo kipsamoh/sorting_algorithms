@@ -1,44 +1,44 @@
 #include "sort.h"
 
 /**
- * swap_list - swaps the elements of the list
+ * swap_list - _swaps the elements of the _list
  *
  * @ptr1: first pointer
  * @ptr2: second pointer
- * @n: n is 0 for increase, n is 1 for decrease
+ * @n: n is 0 for _increase, n is 1 for _decrease
  * Return: no return
  */
 void swap_list(listint_t **ptr1, listint_t **ptr2, int n)
 {
-	listint_t *aux, *tmp;
+	listint_t *aux, *temp;
 
 	aux = *ptr1;
 	tmp = *ptr2;
 
-	aux->next = tmp->next;
-	tmp->prev = aux->prev;
+	aux->next = temp->next;
+	temp->prev = aux->prev;
 
-	if (tmp->next)
-		tmp->next->prev = aux;
+	if (temp->next)
+		temp->next->prev = aux;
 
 	if (aux->prev)
-		aux->prev->next = tmp;
+		aux->prev->next = temp;
 
-	aux->prev = tmp;
-	tmp->next = aux;
+	aux->prev = temp;
+	temp->next = aux;
 
 	if (n == 0)
-		*ptr1 = tmp;
+		*ptr1 = temp;
 	else
 		*ptr2 = aux;
 }
 
 /**
- * increase_sort - move the bigger numbers to the end
+ * increase_sort - move the _bigger numbers to the end
  *
- * @ptr: pointer to the bigger number
- * @limit: limit of the list
- * @list: list of integers
+ * @ptr: pointer to the _bigger number
+ * @limit: limit of the _list
+ * @list: list of _integers
  * Return: no return
  */
 void increase_sort(listint_t **ptr, listint_t **limit, listint_t **list)
