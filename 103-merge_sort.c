@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
- * print_data - print data
+ * print_data - _print data
  * @msg: message
  * @a: array
  * @from: from
@@ -10,22 +10,22 @@
 void print_data(char *msg, int *a, int from, int to)
 {
 	char *sep;
-	int i;
+	int x;
 
 	printf("[%s]: ", msg);
 	sep = "";
 
-	for (i = from; i <= to; i++)
+	for (x = from; x <= to; x++)
 	{
-		printf("%s%d", sep, a[i]);
+		printf("%s%d", sep, a[x]);
 		sep = ", ";
 	}
 	printf("\n");
 }
 
 /**
- * merge - Auxiliar function for
- * Merge sort algorithm
+ * merge - _Auxiliar function for
+ * Merge _sort algorithm
  * @a: array
  * @low: low index
  * @middle: middle
@@ -35,9 +35,9 @@ void print_data(char *msg, int *a, int from, int to)
  */
 void merge(int *a, int low, int middle, int high, int *buff)
 {
-	int lo, lm, i;
+	int lo, lm, x;
 
-	lo = i = low;
+	lo = x = low;
 	lm = middle + 1;
 
 	printf("Merging...\n");
@@ -47,24 +47,24 @@ void merge(int *a, int low, int middle, int high, int *buff)
 	while (lo <= middle && lm <= high)
 	{
 		if (a[lo] < a[lm])
-			buff[i++] = a[lo++];
+			buff[x++] = a[lo++];
 		else
-			buff[i++] = a[lm++];
+			buff[x++] = a[lm++];
 	}
 
 	while (lo <= middle)
-		buff[i++] = a[lo++];
+		buff[x++] = a[lo++];
 
 	while (lm <= high)
-		buff[i++] = a[lm++];
+		buff[x++] = a[lm++];
 
-	for (i = low; i <= high; i++)
-		a[i] = buff[i];
+	for (x = low; x <= high; x++)
+		a[x] = buff[x];
 
 	print_data("Done", a, low, high);
 }
 /**
- * msort -Auxiliar function for
+ * msort -Auxiliar _function for
  * Merge sort algorithm
  * @array: array
  * @low: low index
@@ -74,19 +74,19 @@ void merge(int *a, int low, int middle, int high, int *buff)
  */
 void msort(int *array, int low, int high, int *buffer)
 {
-	int midle;
+	int middle;
 
 	if (low < high)
 	{
-		midle = (low + high - 1) / 2;
-		msort(array, low, midle, buffer);
-		msort(array, midle + 1, high, buffer);
-		merge(array, low, midle, high, buffer);
+		middle = (low + high - 1) / 2;
+		msort(array, low, middle, buffer);
+		msort(array, middle + 1, high, buffer);
+		merge(array, low, middle, high, buffer);
 	}
 }
 /**
- * merge_sort -Sorts an arrayof integers
- * in ascending order using the
+ * merge_sort -Sorts an _arrayof integers
+ * in _ascending order using the
  * Merge sort algorithm
  * @array: array
  * @size: size
