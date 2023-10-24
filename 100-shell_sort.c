@@ -1,8 +1,8 @@
 #include "sort.h"
 /**
- * shell_sort - function that sorts an array
- * of integers in ascending order using the
- * Shell sort algorithm
+ * shell_sort - _function that _sorts an array
+ * of _integers in _ascending order using the
+ * _Shell sort algorithm
  *
  * @array: input arrray
  * @size: size of the array
@@ -23,12 +23,12 @@ void shell_sort(int *array, size_t size)
  * shell_sort function
  * @a: input arrray
  * @size: size of the array
- * @n: intervale
+ * @n: intervalue
  * Return: no return
  */
 void _ssort(int *a, int size, int n)
 {
-	int tmp, i, j;
+	int temp, i, j;
 
 	for (i = 0; (i + n) < size; i++)
 	{
@@ -36,9 +36,9 @@ void _ssort(int *a, int size, int n)
 		{
 			if (a[j] < a[j - n])
 			{
-				tmp = a[j];
+				temp = a[j];
 				a[j] = a[j - n];
-				a[j - n] = tmp;
+				a[j - n] = temp;
 			}
 		}
 	}
