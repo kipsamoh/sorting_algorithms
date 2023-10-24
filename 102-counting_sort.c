@@ -1,8 +1,8 @@
 #include "sort.h"
 /**
- * counting_sort -Sorts an arrayof integers
- * in ascending order using the
- * Counting sort algorithm
+ * counting_sort -Sorts an _array of _integers
+ * in _ascending order using the
+ * _Counting sort algorithm
  * @array: array
  * @size: size
  * Return: no return
@@ -10,7 +10,7 @@
 void counting_sort(int *array, size_t size)
 {
 	int n, i;
-	int *buff, *a;
+	int *buffer, *a;
 
 	if (size < 2)
 		return;
@@ -19,34 +19,34 @@ void counting_sort(int *array, size_t size)
 		if (array[i] > n)
 			n = array[i];
 
-	buff = malloc(sizeof(int) * (n + 1));
-	if (!buff)
+	buffer = malloc(sizeof(int) * (n + 1));
+	if (!buffer)
 		return;
 
 	for (i = 0; i <= n; i++)
-		buff[i] = 0;
+		buffer[i] = 0;
 	for (i = 0; i < (int)size; i++)
-		buff[array[i]] += 1;
+		buffer[array[i]] += 1;
 	for (i = 1; i <= n; i++)
-		buff[i] += buff[i - 1];
+		buffer[i] += buffer[i - 1];
 
-	print_array(buff, (n + 1));
+	print_array(buffer, (n + 1));
 	a = malloc(sizeof(int) * (size + 1));
 
 	if (!a)
 	{
-		free(buff);
+		free(buffer);
 		return;
 	}
 	for (i = 0; i < (int)size; i++)
 	{
-		a[buff[array[i]] - 1] = array[i];
-		buff[array[i]] -= 1;
+		a[buffer[array[i]] - 1] = array[i];
+		buffer[array[i]] -= 1;
 	}
 
 	for (i = 0; i < (int)size; i++)
 		array[i] = a[i];
 
-	free(buff);
+	free(buffer);
 	free(a);
 }
